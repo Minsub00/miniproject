@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="miniproject.realty_mapper">
+
+<insert id="member_join">
+	insert into member_info values ('0', #{memail}, #{mpass}, #{mname}, #{mphone}, #{magree}, now())
+</insert>
+
+	<select id="idcheck" resultType="memberdto" parameterType="String">
+		select * from member_info where memail = #{memail}
+	</select>
+</mapper>

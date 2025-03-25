@@ -22,7 +22,7 @@
 	<!-- top 끝 -->
 
 	<main>
-	<%@ include file="./member_join_view.jsp" %>
+		<%@ include file="./member_join_view.jsp"%>
 	</main>
 
 	<!-- 카피라이터 -->
@@ -30,4 +30,5 @@
 		<%@ include file="./copyright.jsp"%>
 	</footer>
 </body>
+<script src="./js/member_join.js"></script>
 </html>
