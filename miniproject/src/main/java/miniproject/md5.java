@@ -4,7 +4,6 @@ import java.security.MessageDigest;
 
 import org.springframework.stereotype.Repository;
 
-@Repository("md5")
 abstract class md5 {
 	public String md5_code(String pw) throws Exception {
 		StringBuilder sb = new StringBuilder();

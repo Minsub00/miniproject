@@ -3,7 +3,7 @@
 <div class="copyright">
     <ol>
       <li>
-        <img src="./logo/e_click_logo.png" class="logos">
+        <img src="/realty/logo/e_click_logo.png" class="logos">
       </li>
       <li>
         <ul>

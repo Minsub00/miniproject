@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="miniproject.reservation_mapper">
+
+
+<insert id="reservation_in">
+	insert into reservation_data values('0',#{remail},#{rtitle},#{rdate},#{rtime},#{rname},#{rpeople},#{rphone},now())
+</insert>
+
+<select id="reservation_check" resultType="int" parameterType="reservationdto">
+    select count(*) from reservation_data where rdate = #{rdate} and rtime = #{rtime}
+</select>
+
+<select id="reservation_idcheck" resultType="String">
+	select remail from reservation_data where remail = #{remail}
+</select>
+
+<select id="reservation_list" resultType="reservationdto">
+	select * from reservation_data where remail = #{remail} and  (
+    	(rdate > CURDATE()) or 
+    	(rdate = CURDATE() and rtime >= CURTIME())
+	) order by rdate limit 10
+</select>
+
+<delete id="reservation_del">
+	delete from reservation_data where ridx = #{index}
+</delete>
+
+
+<select id="reservation_view" resultType="reservationdto" parameterType="map">
+	select * from reservation_data where remail=#{remail} and rtitle=#{rtitle} and (
+    	(rdate > CURDATE()) or 
+    	(rdate = CURDATE() and rtime >= CURTIME())
+		) order by rdate limit 1
+</select>
+
+
+<select id="check_user_reservation" resultType="int">
+    select count(*) from reservation_data where remail = #{remail} and rtitle = #{rtitle} and  (
+    	(rdate > CURDATE()) or 
+    	(rdate = CURDATE() and rtime >= CURTIME())
+	)
+</select>
+</mapper>	

@@ -110,7 +110,7 @@ function mailcheck() {
 			}
 			console.log(result);
 		}
-		http2.open("get", "/idcheck.do?memail=" + email, true);
+		http2.open("get", "/join/idcheck.do?memail=" + email, true);
 		http2.send();
 	}
 }

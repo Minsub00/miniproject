@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="miniproject.board_mapper">
+<select id="board_list" resultType="board_DTO" parameterType="Map">
+	select * from board_data order by bidx desc limit #{spage}, #{epage}
+</select>
+
+<select id="board_total" resultType="int">
+select count(*) as total from board_data
+</select>
+
+<select id="board_search" resultType="board_DTO" parameterType="String">
+select * from board_data where btitle like concat('%',#{search},'%') order by bidx desc
+</select>
+
+<select id="board_view" resultType="board_DTO" parameterType="Map">
+	select * from board_data where btitle=#{btitle} and bidx=#{bidx}
+</select>
+
+<update id="update_view" parameterType="String">
+	update board_data set bview = bview + 1 where bidx=#{bidx};
+</update>
+
+<insert id="board_write" parameterType="board_DTO">
+	insert into board_data values('0', #{btitle}, #{btext}, #{bwriter}, #{bfile_ori}, #{bfile_new}, #{bfile_url}, 1, now());
+</insert>
+</mapper>

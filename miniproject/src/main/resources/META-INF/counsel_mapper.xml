@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="miniproject.counsel_mapper">
+	<insert id="counsel_reg">
+		insert into counsel_info values ('0', #{cname}, #{cemail}, #{cphone}, #{ctype1}, #{ctype2}, #{cdate}, #{ctext}, now())
+	</insert>
+</mapper>

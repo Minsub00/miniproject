@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="miniproject.type_mapper">
+
+
+<select id="show_tails" resultType="typedto" parameterType="int">
+	select * from type_info where bunyang_index=#{index}
+</select>
+
+<select id="show_title" resultType="string" parameterType="string">
+	select bunyang_title from type_info where bunyang_title=#{title}
+</select>
+
+<select id="show_index" resultType="typedto">
+	select * from type_info limit 8
+</select>
+
+</mapper>

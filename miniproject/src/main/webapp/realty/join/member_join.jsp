@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=7">
-<link rel="stylesheet" type="text/css" href="./css/member_join.css?v=3">
+<link rel="stylesheet" type="text/css" href="../css/index.css?v=7">
+<link rel="stylesheet" type="text/css" href="../css/member_join.css?v=4">
 <style>
 .box {
 	width: 800px;
@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!-- top 시작 -->
-	<%@ include file="./top.jsp"%>
+	<%@ include file="../common/top.jsp"%>
 	<!-- top 끝 -->
 
 	<main>
@@ -27,8 +27,8 @@
 
 	<!-- 카피라이터 -->
 	<footer>
-		<%@ include file="./copyright.jsp"%>
+		<%@ include file="../common/copyright.jsp"%>
 	</footer>
 </body>
-<script src="./js/member_join.js"></script>
+<script src="../js/member_join.js"></script>
 </html>
