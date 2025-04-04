@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>모댈 하우스 사전 방문예약 확인</title>
+<title>모델 하우스 사전 방문예약 확인</title>
 <link rel="stylesheet" type="text/css" href="../css/index.css?v=1">
 <link rel="stylesheet" type="text/css" href="../css/reservation.css?v=4">
 </head>

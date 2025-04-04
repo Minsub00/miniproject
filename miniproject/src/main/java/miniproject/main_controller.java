@@ -130,7 +130,7 @@ public class main_controller extends md5 {
 			if (result > 0) {
 				session.removeAttribute("pwd_email");
 				session.removeAttribute("pwd_name");
-				msg = "alert('비밀번호가 변경되었습니다.');" + "location.href='../index.jsp';";
+				msg = "alert('비밀번호가 변경되었습니다.');" + "location.href='../index.do';";
 			}
 		}
 		m.addAttribute("msg", msg);
